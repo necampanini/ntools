@@ -1,10 +1,9 @@
 # Ntools
-Nick's tools!. A place to save utility functions / classes / files I've written for myself.
+Nick's tools! A place to save utility functions / classes / files I've written for myself. 
 
+Makes use of ES6 syntax.
 
-### Note: Makes use of ES6 syntax
-
-### For Frameworks/libraries:
+### For frameworks/libraries:
 1. `Typescript`
 2. `Angular`
 3. `RxJS`
@@ -20,3 +19,7 @@ Nick's tools!. A place to save utility functions / classes / files I've written 
 - `isObject/isArray from union type, create[Omitted/Picked] versions of types`
 4. Reused Observable types
 - `StatePropertyObservers<T> => Take State of T, turn into mapped type of observables`
+
+#### TODO:
+- Remove angular project configuration
+- Add Angular Material / Reactive Form generator based on properties of `MatDataSource<T>` 
