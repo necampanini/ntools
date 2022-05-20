@@ -1,10 +1,6 @@
 import {NEVER, of} from "rxjs";
 
-export type EntityNumberId<T> = {
-  [id: number]: T
-}
-
-export type EntityStringId<T> = {
+export type GenericEntity<T> = {
   [id: string]: T
 }
 

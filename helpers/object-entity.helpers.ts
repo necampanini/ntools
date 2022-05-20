@@ -1,4 +1,5 @@
 import { reduce } from './recursive-functional.helpers';
+import { GenericEntity } from './types-general.helpers';
 
 export const isAnObject = (val: any): boolean => {
   const isObject = typeof val === 'object';
@@ -48,4 +49,22 @@ export const createPickedFrom = <T, K extends keyof T, R>(
       : result;
 
   return reduce(reduceFn, target, keysFrom(source));
+};
+
+/**
+ * Cautionary check on an object before performing other logic
+ * @param target
+ */
+export const hasMissingValues = <T>(target: T): boolean =>
+  Object.values(target).some((x) => x == null || x == '');
+
+export const removeEntityById = <T>(
+  id: string,
+  entities: GenericEntity<T>
+): GenericEntity<T> => {
+  const { [id]: removed, ...rest } = entities;
+
+  return {
+    ...rest,
+  };
 };
