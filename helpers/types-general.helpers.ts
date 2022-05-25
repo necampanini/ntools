@@ -1,7 +1,10 @@
-import {NEVER, of} from "rxjs";
+import { AbstractControl } from '@angular/forms';
 
 export type GenericEntity<T> = {
-  [id: string]: T
-}
+  [id: string]: T;
+};
 
-export const PLEASE$ = of(NEVER);
+/**
+ * Used in 'example-filter-table' - just to reduce
+ */
+export type FormControlConfig = { [p: string]: AbstractControl };
